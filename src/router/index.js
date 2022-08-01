@@ -12,6 +12,10 @@ const router = createRouter({
       component: HomeView,
     },
     {
+      path: "/:patchMatch(.*)*",
+      redirect: "/",
+    },
+    {
       path: "/about/:id",
       name: "about",
       component: ItemView,
@@ -20,6 +24,10 @@ const router = createRouter({
       path: "/cart",
       name: "cart",
       component: CartView,
+    },
+    {
+      path: "/cart/:patchMatch(.*)*",
+      redirect: "/cart",
     }
   ],
 });
