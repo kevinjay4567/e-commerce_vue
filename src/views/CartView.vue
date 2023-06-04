@@ -8,6 +8,7 @@
     </div>
 
     <div class="cart-items">
+      <h2 v-if="cartArray.length === 0">No items in cart...</h2>
       <CartItem
         v-for="(item, index) in cartArray"
         :key="item.id"
